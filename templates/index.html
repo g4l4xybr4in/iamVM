@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            padding-top: 60px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: black;
+            flex-direction: column;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #031a1c;
+            padding: 20px;
+            padding-top: 0px;
+            padding-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 
+                        0 0 20px rgba(255, 255, 255, 0.3), 
+                        0 0 30px rgba(255, 255, 255, 0.3), 
+                        0 0 40px rgba(255, 255, 255, 0.3);
+            width: 500px;
+            text-align: center;
+            animation: glow 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 
+                            0 0 20px rgba(255, 255, 255, 0.3), 
+                            0 0 30px rgba(255, 255, 255, 0.3), 
+                            0 0 40px rgba(255, 255, 255, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 
+                            0 0 40px rgba(255, 255, 255, 0.3), 
+                            0 0 60px rgba(255, 255, 255, 0.3), 
+                            0 0 80px rgba(255, 255, 255, 0.3);
+            }
+        }
+        h1, h2, h3, h4, h5, p, a {
+            color:antiquewhite;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #516c87;
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #8aa6bb;
+        }
+        .heading {
+            margin-bottom: 0px; /* Add margin-bottom to create space between the headings */
+        }
+        .heading:last-child {
+            margin-bottom: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="heading, container">
+        <h1>Victoria Morgan</h1>
+        <p>Welcome Home to Your Soul</p>
+    </div>
+    <div class="container">
+        <h2>I am Victoria Morgan</h2>
+        <p>The sexiest most loving Earth Goddess in the galaxy</p>
+    </div>
+    <div class="container">
+        <h1>Everlasting</h1>
+        <h3>strengthening the family unit by connecting to one's own:</h3>
+        <h2> MIND BODY SOUL</h2>
+        <h4>1 in 5 marriages end within the first year of having children. I'm here to shine a light into the dark corners of the human psyche to transform marriages into an everlasting sacred union.</h4>
+        <p>Click the button below to access the survey form:</p>
+        <!-- Replace the hyperlink with a button -->
+        <button class="button" onclick="location.href='/templates/form.html'">Go to Survey Form</button>
+    </div>
+    <div class="container">
+        <h1>Connect with me</h1>
+        <h4>Instagram: <a href="https://www.instagram.com/viictoria.morgan">Visit Profile</a></h4>
+        <h4>Twitter</h4>
+    </div>
+</body>
+</html>

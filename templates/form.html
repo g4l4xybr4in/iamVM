@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: antiquewhite;
+        }
+        h3 {
+            text-align: center;
+            color: antiquewhite;
+        }
+        h5{
+            color: antiquewhite;
+            font-weight: 50;
+        }
+        form {
+            text-align: center;
+        }
+        label{
+            color: antiquewhite;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .container {
+        background-color: #031a1c;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 
+                    0 0 20px rgba(255, 255, 255, 0.3), 
+                    0 0 30px rgba(255, 255, 255, 0.3), 
+                    0 0 40px rgba(255, 255, 255, 0.3);
+        width: 500px;
+        text-align: center;
+        animation: glow 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes glow {
+        0% {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 
+                        0 0 20px rgba(255, 255, 255, 0.3), 
+                        0 0 30px rgba(255, 255, 255, 0.3), 
+                        0 0 40px rgba(255, 255, 255, 0.3);
+        }
+        100% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 
+                        0 0 40px rgba(255, 255, 255, 0.3), 
+                        0 0 60px rgba(255, 255, 255, 0.3), 
+                        0 0 80px rgba(255, 255, 255, 0.3);
+        }
+    }
+        input {
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #555555;
+            border-radius: 4px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        input[type="submit"] {
+            background-color: #516c87;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #8aa6bb;
+        }
+        p{
+            color:antiquewhite;
+            font-size: larger;
+            font-weight: 300;
+        }
+        input[type="text"]{
+            width: 300px;
+            height: 120px;
+            padding: 10px;
+            font-size: 14px;
+        }
+        input[type="singlelinetext"]{
+            width: 300px;
+            padding: 10px;
+            font-size: 14px;
+        }
+        input[type="email"]{
+            width: 300px;
+        }
+        .flowing-input {
+            font-family: Arial, sans-serif; /* Choose a suitable font */
+            font-size: 14px; /* Choose a suitable font size */
+            resize: none; /* Prevent resizing */
+            overflow: auto; /* Enable scrolling */
+            padding: 10px; /* Add padding for readability */
+        }
+        textarea {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #555555;
+            border-radius: 4px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Market Research Survey</h1>
+    <h3>Currently Married Version</h3>
+    <h5> Please answer the following questions. Your responses are confidential and will not be shared.</h5>
+    <form action="/submit" method="post">
+
+        <label for="fullName">Name:</label>
+        <input type="name" name="fullName" class="intro" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" class="intro" required><br>
+
+        <label for="DOB">Date of birth:</label>
+        <input type="date" name="DOB" class="intro" required><br>
+
+        <label for="birthTime">Time of birth:</label>
+        <input type="time" name="birthTime" class="birthLocation" required><br>
+
+        <label for="birthLocation">Location of birth:</label>
+        <input type="singlelinetext" name="birthLocation" required><br>
+
+        <h3> Answer questions 1-5 in terms of before becoming a parent.</h3>
+        <label for="timeTogetherBefore">1. Hours spent per week one on one with your partner:</label>
+        <input type="integer" name="timeTogetherBefore" required><br>
+
+        <label for="numDatesBefore">2. Average number of dates per week before having a child/children:</label>
+        <input type="integer" name="numDatesBefore" required><br>
+
+        <label for="numIntimacyBefore">3. Average number of times you had sex with your partner before becoming a parent:</label>
+        <input type="integer" name="numIntimacyBefore" required><br>
+
+        <label for="numFightsBefore">4. Average number of fights/disagreements per week before kids:</label>
+        <input type="integer" name="numFightsBefore" required><br>
+
+        <label for="fightReasonBefore">5. What were the main causes of conflict in your relationship before kids, provide a memorable example?</label>
+        <textarea name="fightReasonBefore" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+
+        <h3>Answer questions 6-10 in terms of after becoming a parent.</h3>
+
+        <label for="timeTogetherAfter">6. Hours spent per week one on one with your partner after kids:</label>
+        <input type="integer" name="timeTogetherAfter" required><br>
+
+        <label for="numDatesAfter">7. Number of dates per week after having a child/children:</label>
+        <input type="integer" name="numDatesAfter" required><br>
+
+        <label for="numIntimacyAfter">8. Average number of times you have sex per week now with kids:</label>
+        <input type="integer" name="numIntimacyAfter" required><br>
+
+        <label for="numFightsAfter">9. Average number of fights/disagreements per month after having kids:</label>
+        <input type="integer" name="numFightsAfter" required><br>
+
+         <label for="fightReasonAfter">10. What were the main causes of conflict in your relationship after kids, provide a memorable example?</label>
+         <textarea name="fightReasonAfter" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <h3>Answer questions 11-15 in terms of your ideal marriage.</h3>
+
+        <label for="timeTogetherIdeal">11. Ideal number of hours spent one on one with your partner per week:</label>
+        <input type="integer" name="timeTogetherIdeal" required><br>
+
+        <label for="numDatesIdeal">12. Ideal number of dates to go on with your partner per week:</label>
+        <input type="integer" name="numDatesIdeal" required><br>
+
+        <label for="numIntimacyIdeal">13. Ideal number of times to have sex with your partner per week:</label>
+        <input type="integer" name="numIntimacyIdeal" required><br>
+
+        <label for="numFightsIdeal">14. What is your ideal method to resolve conflict in disagreements with you and your partner:</label>
+        <textarea name="numFightsIdeal" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="idealMarriage">15. What does your ideal marriage look like?</label>
+        <textarea name="idealMarriage" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+
+
+        <h3>General Questions</h3>
+
+        <label for="marriageChange">How has your marriage changed since having kids?</label>
+        <textarea name="marriageChange" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="changeFeeling">How do these changes make you feel?</label>
+        <textarea name="changeFeeling" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="negotiation">How do you negotiate with your partner? (Screaming fights, agreeable/respectful) </label>
+        <textarea name="negotiation" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="fightResult">How do you feel after you conflict with your partner? Do you feel able to resolve the situation and find understanding or does some unresolved processing remain?</label>
+        <textarea name="fightResult" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="reocurringIssues">Do you have reocurring issues that come up with you partner that are about your child or children? What is the outcome?</label>
+        <textarea name="reocurringIssues" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="frusturatedTime">Write about a time you felt frusturated with your partner and how you communicated that?</label>
+        <textarea name="frusturatedTime" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="relationalImpact">What impact are your relational issues having in your life? How does it show up in your day to day life? How does it make you feel?</label>
+        <textarea name="relationalImpact" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="conflictResolved">Write about a time where you resolved a conflict with your partner that felt good and productive.</label>
+        <textarea name="conflictResolved" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="parentExpectations">What were your expectations of yourself and of your partner going into parenthood? Did you talk about expectations? How did they respond?</label>
+        <textarea name="parentExpectations" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="addressIssue">What have you tried so far to address your relationship issues? Has it worked? Why or why not?</label>
+        <textarea name="addressIssue" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="issueLength">How long have you been feeling challenged with this?</label>
+        <textarea name="issueLength" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="idealSupport">If you were to choose to invest in support from a coach/expert to achieve your ideal marriage, what would this support look like for you?</label>
+        <textarea name="idealSupport" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="optimalResources">What types of resources are usually the most helpful to you? (printed documents, Zoom calls, personalized recommendations, community, visualiztions)</label>
+        <textarea name="optimalResources" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <label for="upbringing">What was your upbringing like? Would you say you model patterns and bahaviours shown by your parents? Have you evolved?</label>
+        <textarea name="upbringing" class="flowing-input" rows="6" cols="50" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
